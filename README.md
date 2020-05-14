@@ -8,8 +8,8 @@
 + Bootstrap
 ### 使用
 + 唤醒扩展
-    + Windows下：快捷键Ctrl+B
-    + MacOS下：快捷键Commend+B
+    + Windows：快捷键Ctrl+B
+    + MacOS：快捷键MacCtrl+B
     + 点击右上方扩展图标
 + 切换搜索引擎
     + 按Tab键打开下拉列表，然后按数字键选择需要的引擎，或者使用 ↑  ↓ 键选中按回车选择 
