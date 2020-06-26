@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "QuickSearch",
-    "version": "1.0",
+    "version": "1.3",
     "description": "QuickSearch",
     "icons": {
         "16": "images/icon16.png",
@@ -20,11 +20,11 @@
         "scripts": [
             "background.js"
         ],
-        "persistent":false
+        "persistent":true
     },
     "permissions": [
         "contextMenus",//右键菜单权限
-        "http://*/",
+        "https://*/",
         "http://*/"
     ],
     "commands": {
@@ -36,13 +36,13 @@
           "description": "Opens index.html"
         }
     },
-    "content_scripts": [{
-        "matches": [
-            "https://*/",
-            "http://*/"
-        ],
-        "js": [
-            "bundle.js"
-        ]
-    }],
+    // "content_scripts": [{//指定将哪些脚本何时注入到哪些页面中
+    //     "matches": [
+    //         "https://*/",
+    //         "http://*/"
+    //     ],
+    //     "js": [
+    //         "bundle.js"
+    //     ]
+    // }],
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"}

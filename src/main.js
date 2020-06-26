@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 
 
 var vm = new Vue({
-    el:'#app',
+    el:'#QuickSearch-chrome',
     render:c =>c(app),
 })
 
