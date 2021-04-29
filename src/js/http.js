@@ -7,7 +7,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 // axios.defaults.crossDomain=true
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
-    config.data = qs.stringify(config.data);
+    // config.data = qs.stringify(config.data);
     config.headers = {
         'Content-Type':'application/x-www-form-urlencoded'
     };
