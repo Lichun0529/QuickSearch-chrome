@@ -6,7 +6,7 @@
                         <div class="input-group-prepend">
                             <button id="engineButton" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{defaultEngine}}</button>
                             <div class="dropdown-menu" >
-                                <a class="dropdown-item" @click="changeEngine(item,index)" v-for="(item,index) in engineList" :key="index" href="#">{{item}}</a>
+                                <a class="dropdown-item" @click="changeEngine(item,index)" v-for="(item,index) in engineList" :key="index" href="#">{{`${index+1}. ${item}`}}</a>
                             </div>
                         </div>
                     <input id="searchInput" @keydown="searchKeyup" @change="inputting" v-model="searchContent" autocomplete="off" type="text" class="form-control" aria-label="Text input with dropdown button">
@@ -31,7 +31,7 @@
                 checked:false,//搜索建议是否被选中
                 selectIndex:-1,//中间变量
                 searchContent:'',//搜索框内的内容
-                engineList:['Google','百度','淘宝','百度地图','bilibili','YouTube','StackOverflow','思否','MDN','GitHub','微信','知乎','京东'],//引擎列表
+                engineList:['Google','百度','MDN','GitHub','StackOverflow','淘宝','百度地图','bilibili','YouTube','知乎','思否','微信','京东'],//引擎列表
                 data:[],//搜索建议列表
                 defaultEngine:'',//默认搜索引擎
                 showDropdown:false,//下拉菜单是否显示
@@ -251,7 +251,10 @@
         input:focus{
             border: none !important;
             border: #ced4da 1px solid !important;
-            box-shadow: 0 0 0 0.2rem rgba(108,117,125,.5) !important;
+            box-shadow: none !important;
+        }
+        .dropdown-toggle:focus{
+            box-shadow: none !important;
         }
         .btn-outline-secondary{
             border-color:#ced4da;
